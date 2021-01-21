@@ -3,6 +3,7 @@ const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
+var tree1;
 
 function preload()
 {
@@ -17,6 +18,7 @@ function setup() {
 	world = engine.world;
 
 	//Create the Bodies Here.
+	tree1 = new tree(50,50,300,300);
 
 
 	Engine.run(engine);
@@ -27,6 +29,7 @@ function setup() {
 function draw() {
   rectMode(CENTER);
   background(0);
+  tree1.display();
   
   drawSprites();
  
