@@ -19,7 +19,7 @@ function setup() {
 	world = engine.world;
 
 	//Create the Bodies Here.
-	tree1 = new tree(900,200,350,350);
+	tree1 = new tree(900,206,350,350);
 	ground1 = new Ground(640,550,1280,5);
 
 
