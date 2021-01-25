@@ -12,6 +12,7 @@ class tree {
         this.height = height;
     }
     display() {
+        imageMode(CENTER);
         image(this.image,this.x,this.y,this.width,this.height);
 
     }
