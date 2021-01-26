@@ -36,11 +36,11 @@ function setup() {
 	boy = Bodies.rectangle(400,495,0,0,static);
 	World.add(world,boy);
 	
-	mango1 = new Mango(970,320,40,40);
-	mango2 = new Mango(1020,260,40,40);
-	mango3 = new Mango(1080,320,40,40);
-	mango4 = new Mango(1100,240,40,40);
-	mango5 = new Mango(1160,320,40,40);
+	mango1 = new Mango(970,320,20);
+	mango2 = new Mango(1020,260,20);
+	mango3 = new Mango(1080,320,20);
+	mango4 = new Mango(1100,240,20);
+	mango5 = new Mango(1160,320,20);
 
 	chain1 = new chain(stone1.body,{x: boy.position.x-50, y:boy.position.y-45})
 
@@ -79,14 +79,5 @@ function draw() {
  
 }
 
-function detectCollision(bodyA, bodyB) {
-	var bodyAPosition = bodyA.body.position;
-	var bodyBPosition = bodyB.body.position;
 
-	var distance = dist(bodyAPosition.x,bodyAPosition.y,bodyBPosition.x,bodyBPosition.y);
-
-	if(distance<=bodyA.r + bodyB.r){
-		Matter.Body.setStatic(bodyB.body, false)
-	}
-}
  
