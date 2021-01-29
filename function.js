@@ -16,3 +16,10 @@ function detectCollision(bodyA, bodyB) {
 		Matter.Body.setStatic(bodyB.body, false)
 	}
 }
+
+function keyPressed() {
+	if(keyCode == 32) {
+		//Matter.Body.setPosition(stone1.body, {x: 355, y:460});
+		chain1.attach(stone1.body);
+	}
+}
